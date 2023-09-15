@@ -88,7 +88,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Signup'>
         <Stack.Screen component={Homescreen} name='Home' />
-        <Stack.Screen component={Signupscreen} name='Signup'/>
         <Stack.Screen component={Categoryscreen} name='Category'/>
         <Stack.Screen component={Singlefood} name='Singlefood'/>
         <Stack.Screen component={Signupscreen} name='Signup'/>

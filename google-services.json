@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "284797887677",
+    "project_id": "foodexpress-fbce8",
+    "storage_bucket": "foodexpress-fbce8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:284797887677:android:dc7cef1cd931378740c3d4",
+        "android_client_info": {
+          "package_name": "com.foodexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVPivyawrBkB0EoLVz1w5rOR0bvuNS4vo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
