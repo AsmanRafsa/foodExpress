@@ -7,6 +7,7 @@ import Homescreen from './src/screens/Homescreen';
 import Signupscreen from './src/screens/Signupscreen';
 import Categoryscreen from './src/screens/Categoryscreen';
 import Singlefood from './src/screens/Singlefood';
+import Signin from './src/screens/Signinscreen';
 
 const slides = [
   {
@@ -85,11 +86,14 @@ export default function App() {
   }
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Home'>
+      <Stack.Navigator initialRouteName='Signup'>
         <Stack.Screen component={Homescreen} name='Home' />
         <Stack.Screen component={Signupscreen} name='Signup'/>
         <Stack.Screen component={Categoryscreen} name='Category'/>
         <Stack.Screen component={Singlefood} name='Singlefood'/>
+        <Stack.Screen component={Signupscreen} name='Signup'/>
+        <Stack.Screen component={Signin} name='Signin'/>
+
 
       </Stack.Navigator>
     </NavigationContainer>
