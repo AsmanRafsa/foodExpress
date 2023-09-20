@@ -3,11 +3,16 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useState} from 'react';
 import {Image, Text, View} from 'react-native';
 import AppIntroSlider from 'react-native-app-intro-slider';
-import Homescreen from './src/screens/Homescreen';
 import Signupscreen from './src/screens/Signupscreen';
 import Categoryscreen from './src/screens/Categoryscreen';
 import Singlefood from './src/screens/Singlefood';
 import Signin from './src/screens/Signinscreen';
+import Homescreen from './src/screens/Homescreen';
+import Cart from './src/screens/Cartscreen';
+import SetContext from './src/context/state';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import Menu from './src/screens/Menuscreen';
+import Profile from './src/screens/Profilescreen';
 
 const slides = [
   {
@@ -33,6 +38,8 @@ const slides = [
 ];
 
 export default function App() {
+  const Tab = createBottomTabNavigator();
+
   const Stack = createNativeStackNavigator();
   const [showHomePage, setShowHomePage] = useState(false);
   function showLabel(label) {
@@ -84,17 +91,42 @@ export default function App() {
       />
     );
   }
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName='Signup'>
-        <Stack.Screen component={Homescreen} name='Home' />
-        <Stack.Screen component={Categoryscreen} name='Category'/>
-        <Stack.Screen component={Singlefood} name='Singlefood'/>
-        <Stack.Screen component={Signupscreen} name='Signup'/>
-        <Stack.Screen component={Signin} name='Signin'/>
-
-
+  function StackNavigator() {
+    return (
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen component={Homescreen} name="Home" />
+        <Stack.Screen component={Categoryscreen} name="Category" />
+        <Stack.Screen component={Singlefood} name="Singlefood" />
+        <Stack.Screen component={Signupscreen} name="Signup" />
+        <Stack.Screen component={Signin} name="Signin" />
+        <Stack.Screen component={Cart} name="Cart" />
       </Stack.Navigator>
-    </NavigationContainer>
+    );
+  }
+  function TabNavigator() {
+    return (
+      <Tab.Navigator>
+        <Tab.Screen
+          name="HomeScreen"
+          component={StackNavigator}
+          options={{
+            tabBarLabel: 'Home',
+            tabBarIcon: () => {}
+             
+            
+          }}
+        />
+        <Tab.Screen name="Browse" component={Menu} />
+        <Tab.Screen name="CartScreen" component={Cart} />
+        <Tab.Screen name="Profile" component={Profile} />
+      </Tab.Navigator>
+    );
+  }
+  return (
+    <SetContext>
+      <NavigationContainer>
+        <TabNavigator />
+      </NavigationContainer>
+    </SetContext>
   );
 }

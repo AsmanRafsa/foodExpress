@@ -1,7 +1,6 @@
 import {Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 export default function Categoryscreen({route, navigation}) {
   const {foods} = route.params;
-  console.log(foods);
   return (
     <ScrollView>
       <View>
@@ -9,7 +8,7 @@ export default function Categoryscreen({route, navigation}) {
           return (
             <TouchableOpacity
               onPress={() => {
-                navigation.navigate('Singlefood', {singlefood:items});
+                navigation.navigate('Singlefood', {singlefood:Z});
               }}>
               <View>
                 <Text className="text-black">{items.foodName}</Text>

@@ -69,4 +69,84 @@ export const data = [
       },
     ],
   },
+//New categories
+  {
+    categoryName: 'Salad',
+    categoryImage:require('../assets/foods/salad.png'),
+    foods: [
+      {
+        foodName: 'Classic Greek',
+        description:
+          'Fried mozzarella cheese stick served with marinara source.',
+        image: require('../assets/foods/mozzarela.png'),
+        price: 599,
+      },
+      {
+        foodName: 'Fruity Salad',
+        description:
+          'A classic appetizer with cream and comforting flavors.Spinach,cheeses and seasoning creates adelicious dip!',
+        image: require('../assets/foods/spinach-dip.png'),
+        price: 690,
+      },
+      {
+        foodName: 'New Potato',
+        description: 'crispy chicken wings tossed in your choice of sauce.',
+        image: require('../assets/foods/chicken-wings.png'),
+        price: 1000,
+      },
+    ],
+  },
+  {
+    categoryName: 'Beverages',
+    categoryImage:require('../assets/foods/beverages2.png'),
+    foods: [
+      {
+        foodName: 'Sparkling drinks',
+        description:
+          'Fried mozzarella cheese stick served with marinara source.',
+        image: require('../assets/foods/mozzarela.png'),
+        price: 599,
+      },
+      {
+        foodName: 'Juices',
+        description:
+        'Fresh juice from Kenya`s top juice-extracting and soft-drinks manufacturing companies.',
+        image: require('../assets/foods/spinach-dip.png'),
+        price: 690,
+      },
+      {
+        foodName: 'Mocktails',
+        description: 'A cocktail without liqour with a variety of tasty ingredients to crawte flavor fusion,providing a sophisticated beverage sans alcohol.',
+        image: require('../assets/foods/chicken-wings.png'),
+        price: 1000,
+      },
+    ],
+  },
+  {
+    categoryName: 'Local foods',
+    categoryImage:require('../assets/foods/localfood3.png'),
+    foods: [
+      {
+        foodName: 'Ugali',
+        description:
+          'Enjoy the staple kenyan food cookes by the best flour from the best maize millers.',
+        image: require('../assets/foods/mozzarela.png'),
+        price: 199,
+      },
+      {
+        foodName: 'Githeri curry',
+        description:
+          'Spicy Maize and beans with your favorite curry is waiting for you!',
+        image: require('../assets/foods/spinach-dip.png'),
+        price: 300,
+      },
+      {
+        foodName: 'Beef Pilau',
+        description: 'A traditional Kenyan rice dish made with aromatic herbs and spices mixed with tender pieces of beef.',
+        image: require('../assets/foods/chicken-wings.png'),
+        price: 300,
+      },
+    ],
+  },
+
 ];
