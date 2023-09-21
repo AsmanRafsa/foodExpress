@@ -13,6 +13,7 @@ import SetContext from './src/context/state';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Menu from './src/screens/Menuscreen';
 import Profile from './src/screens/Profilescreen';
+import { HomeOutlined } from '@ant-design/icons';
 
 const slides = [
   {
@@ -93,7 +94,7 @@ export default function App() {
   }
   function StackNavigator() {
     return (
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Signin">
         <Stack.Screen component={Homescreen} name="Home" />
         <Stack.Screen component={Categoryscreen} name="Category" />
         <Stack.Screen component={Singlefood} name="Singlefood" />
@@ -105,13 +106,15 @@ export default function App() {
   }
   function TabNavigator() {
     return (
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{headerShown:false}}>
         <Tab.Screen
           name="HomeScreen"
           component={StackNavigator}
           options={{
             tabBarLabel: 'Home',
-            tabBarIcon: () => {}
+            tabBarIcon: () => {
+             <HomeOutlined name="home" color='black' size={50}/>
+            }
              
             
           }}

@@ -4,6 +4,27 @@ export const data = [
     categoryImage:require('../assets/foods/appetizers.png'),
     foods: [
       {
+        foodName: 'Hot-dog Sandwich',
+        description:
+          'Fresh sandwich from the best restaurants.',
+        image: require('../assets/foods/hotdogsandwich.png'),
+        price: 299,
+      },
+      {
+        foodName: 'Mushroom burger',
+        description:
+          'Fried mushroom inside fresh buns.',
+        image: require('../assets/foods/mushroom-burger.png'),
+        price: 499,
+      },
+      {
+        foodName: 'Spaghetti and meatballs',
+        description:
+          'Boiled pasta served with meatballs containing your favorite sauce.',
+        image: require('../assets/foods/spaghetti-and-meatballs.png'),
+        price: 399,
+      },
+      {
         foodName: 'Mozzarella Sticks',
         description:
           'Fried mozzarella cheese stick served with marinara source.',
