@@ -30,7 +30,7 @@ export default function Signin({navigation}) {
       <TextInput
         className="w-[100%] self-center  mx-10 my-4 text-xl p-5 text-black bg-gray-300 rounded-[50px] "
         placeholder="Email Address"
-        placeholderTextColor={"gray"}
+        placeholderTextColor={'gray'}
         type="email"
         onChangeText={email => setEmail(email)}
         defaultText={email}
@@ -39,7 +39,7 @@ export default function Signin({navigation}) {
       <TextInput
         className="w-[100%] self-center  mx-10 my-4 text-xl p-5 text-black bg-gray-300 rounded-[50px] "
         placeholder="Password"
-        placeholderTextColor={"gray"}
+        placeholderTextColor={'gray'}
         type="password"
         onChangeText={password => setPassword(password)}
         defaultText={password}
@@ -61,22 +61,28 @@ export default function Signin({navigation}) {
           Log In
         </Text>
       </TouchableOpacity>
-      <Text className="border-b border-gray-600">OR</Text>
+      {/* <Text className="border-b border-gray-600">OR</Text> */}
+
+      <View className=" flex items-center flex-row py-4 my-[1em]">
+        <View className="flex-grow p-0 h-px bg-gray-500 "></View>
+        <Text className="flex-shrink font-medium text-gray-500 text-2xl mx-1">OR</Text>
+        <View className="flex-grow h-px p-0 bg-gray-500 "></View>
+      </View>
 
       <TouchableOpacity className="flex flex-row justify-center items-center p-3 rounded-[50px] my-3 shadow shadow-gray-500 bg-white w-[100%]">
         <Image
           source={require('../../assets/foods/google.png')}
           className="w-[10vw] h-[5vh]"
         />
-        <Text className="text-2xl text-center ml-5 font-bold text-black">
+        <Text className="text-3xl text-center mx-10 font-bold text-black">
           Continue With Google
         </Text>
       </TouchableOpacity>
       <TouchableOpacity className="flex flex-row justify-center items-center p-3 rounded-[50px] w-[100%] my-3">
-        <Text className="text-black font-bold mb-3 text-2xl">
+        <Text className="text-gray-500 font-semibold mb-3 text-2xl">
           Don't Have an Account?
         </Text>
-        <Text className="text-[#ff7356] font-bold text-2xl ml-2 mb-3">
+        <Text className="text-[#ff7356] font-medium text-2xl ml-2 mb-3">
           Sign Up
         </Text>
       </TouchableOpacity>

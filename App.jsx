@@ -94,7 +94,7 @@ export default function App() {
   }
   function StackNavigator() {
     return (
-      <Stack.Navigator initialRouteName="Signin">
+      <Stack.Navigator initialRouteName="Signup">
         <Stack.Screen component={Homescreen} name="Home" />
         <Stack.Screen component={Categoryscreen} name="Category" />
         <Stack.Screen component={Singlefood} name="Singlefood" />
