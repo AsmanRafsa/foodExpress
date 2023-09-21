@@ -87,7 +87,13 @@ export default function Signupscreen({navigation}) {
             Create Account
           </Text>
         </TouchableOpacity>
-        <Text className="border-b border-gray-600">OR</Text>
+        {/* <Text className="border-b border-gray-600">OR</Text> */}
+
+        <View className=" flex items-center flex-row py-4 my-[1em]">
+        <View className="flex-grow p-0 h-px bg-gray-400 "></View>
+        <Text className="flex-shrink font-bold text-gray-500 text-2xl">OR</Text>
+        <View className="flex-grow h-px p-0 bg-gray-400 "></View>
+      </View>
 
         <TouchableOpacity className="flex flex-row justify-center items-center p-3 rounded-[50px] my-3 shadow shadow-gray-500 bg-white w-[100%]">
           <Image
@@ -99,7 +105,7 @@ export default function Signupscreen({navigation}) {
           </Text>
         </TouchableOpacity>
         <TouchableOpacity className="flex flex-row justify-center items-center p-3 rounded-[50px] w-[100%] my-3">
-          <Text className="text-black font-bold mb-3 text-2xl">Already Have an Account?</Text>
+          <Text className="text-gray-500 font-medium mb-3 text-2xl">Already Have an Account?</Text>
           <Text className="text-[#ff7356] font-bold text-2xl ml-2 mb-3">Log In</Text>
         </TouchableOpacity>
       </View>
